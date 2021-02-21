@@ -1,0 +1,633 @@
+2021-02-20 18:44:15,737:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:14: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2021-02-20 18:44:15,753:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:39: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2021-02-20 18:44:15,754:INFO: WARNING: randomly initializing word vectors
+2021-02-20 18:44:15,754:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:42: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+2021-02-20 18:44:15,754:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/init_ops.py:1251: calling VarianceScaling.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2021-02-20 18:44:15,763:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:90: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2021-02-20 18:44:16,148:WARNING: 
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+2021-02-20 18:44:16,148:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:94: LSTMCell.__init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.LSTMCell, and will be replaced by that in Tensorflow 2.0.
+2021-02-20 18:44:16,148:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:98: bidirectional_dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.Bidirectional(keras.layers.RNN(cell))`, which is equivalent to this API
+2021-02-20 18:44:16,149:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn.py:464: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+2021-02-20 18:44:16,209:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn_cell_impl.py:961: calling Zeros.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2021-02-20 18:44:16,764:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn.py:244: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2021-02-20 18:44:17,040:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:71: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+2021-02-20 18:44:17,938:INFO: init tf session
+2021-02-20 18:44:17,938:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:167: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2021-02-20 18:44:17,939:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:168: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+2021-02-20 18:44:18,054:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:169: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2021-02-20 18:44:18,074:INFO: first training which no cache
+2021-02-20 18:44:18,074:INFO: Epoch 1 out of 10
+2021-02-20 18:44:19,724:INFO: batch 0 of batches 60,training loss:126.21
+2021-02-20 18:51:17,836:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:14: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2021-02-20 18:51:17,851:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:39: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2021-02-20 18:51:17,851:INFO: WARNING: randomly initializing word vectors
+2021-02-20 18:51:17,851:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:42: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+2021-02-20 18:51:17,851:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/init_ops.py:1251: calling VarianceScaling.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2021-02-20 18:51:17,861:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:90: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2021-02-20 18:51:18,247:WARNING: 
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+2021-02-20 18:51:18,247:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:94: LSTMCell.__init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.LSTMCell, and will be replaced by that in Tensorflow 2.0.
+2021-02-20 18:51:18,247:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:98: bidirectional_dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.Bidirectional(keras.layers.RNN(cell))`, which is equivalent to this API
+2021-02-20 18:51:18,248:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn.py:464: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+2021-02-20 18:51:18,302:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn_cell_impl.py:961: calling Zeros.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2021-02-20 18:51:18,882:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn.py:244: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2021-02-20 18:51:19,164:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:71: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+2021-02-20 18:51:20,169:INFO: init tf session
+2021-02-20 18:51:20,170:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:180: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2021-02-20 18:51:20,170:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:181: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+2021-02-20 18:51:20,298:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:182: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2021-02-20 18:51:20,319:INFO: first training which no cache
+2021-02-20 18:51:20,319:INFO: Epoch 1 out of 10
+2021-02-20 18:51:21,933:INFO: batch 0 of batches 60,training loss:127.89
+2021-02-20 18:52:13,339:INFO: Epoch 0 dev score acc 0.82 - Epoch 0 dev score f1 0.28
+2021-02-20 18:52:13,339:INFO: save session
+2021-02-20 18:52:13,569:INFO: - new best score 0.2781!
+2021-02-20 18:52:13,569:INFO: Epoch 2 out of 10
+2021-02-20 18:52:14,499:INFO: batch 0 of batches 60,training loss:24.92
+2021-02-20 18:59:39,176:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:14: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2021-02-20 18:59:39,189:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:39: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2021-02-20 18:59:39,189:INFO: WARNING: randomly initializing word vectors
+2021-02-20 18:59:39,189:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:42: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+2021-02-20 18:59:39,190:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/init_ops.py:1251: calling VarianceScaling.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2021-02-20 18:59:39,198:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:90: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2021-02-20 18:59:39,668:WARNING: 
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+2021-02-20 18:59:39,669:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:94: LSTMCell.__init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.LSTMCell, and will be replaced by that in Tensorflow 2.0.
+2021-02-20 18:59:39,669:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:98: bidirectional_dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.Bidirectional(keras.layers.RNN(cell))`, which is equivalent to this API
+2021-02-20 18:59:39,669:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn.py:464: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+2021-02-20 18:59:39,730:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn_cell_impl.py:961: calling Zeros.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2021-02-20 18:59:40,275:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn.py:244: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2021-02-20 19:00:45,276:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:14: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2021-02-20 19:00:45,291:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:39: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2021-02-20 19:00:45,291:INFO: WARNING: randomly initializing word vectors
+2021-02-20 19:00:45,291:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:42: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+2021-02-20 19:00:45,292:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/init_ops.py:1251: calling VarianceScaling.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2021-02-20 19:00:45,301:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:90: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2021-02-20 19:00:45,701:WARNING: 
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+2021-02-20 19:00:45,701:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:94: LSTMCell.__init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.LSTMCell, and will be replaced by that in Tensorflow 2.0.
+2021-02-20 19:00:45,702:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:98: bidirectional_dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.Bidirectional(keras.layers.RNN(cell))`, which is equivalent to this API
+2021-02-20 19:00:45,702:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn.py:464: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+2021-02-20 19:00:45,764:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn_cell_impl.py:961: calling Zeros.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2021-02-20 19:00:46,343:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn.py:244: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2021-02-20 19:03:10,241:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:14: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2021-02-20 19:03:10,254:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:39: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2021-02-20 19:03:10,254:INFO: WARNING: randomly initializing word vectors
+2021-02-20 19:03:10,254:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:42: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+2021-02-20 19:03:10,255:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/init_ops.py:1251: calling VarianceScaling.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2021-02-20 19:03:10,263:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:90: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2021-02-20 19:03:10,656:WARNING: 
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+2021-02-20 19:03:10,657:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:94: LSTMCell.__init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.LSTMCell, and will be replaced by that in Tensorflow 2.0.
+2021-02-20 19:03:10,657:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:98: bidirectional_dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.Bidirectional(keras.layers.RNN(cell))`, which is equivalent to this API
+2021-02-20 19:03:10,657:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn.py:464: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+2021-02-20 19:03:10,726:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn_cell_impl.py:961: calling Zeros.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2021-02-20 19:03:11,293:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn.py:244: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2021-02-20 19:12:26,029:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:14: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2021-02-20 19:12:26,042:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:40: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2021-02-20 19:12:26,043:INFO: WARNING: randomly initializing word vectors
+2021-02-20 19:12:26,043:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:43: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+2021-02-20 19:12:26,043:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/init_ops.py:1251: calling VarianceScaling.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2021-02-20 19:12:26,051:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:91: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2021-02-20 19:12:26,504:WARNING: 
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+2021-02-20 19:12:26,504:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:95: LSTMCell.__init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.LSTMCell, and will be replaced by that in Tensorflow 2.0.
+2021-02-20 19:12:26,504:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:99: bidirectional_dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.Bidirectional(keras.layers.RNN(cell))`, which is equivalent to this API
+2021-02-20 19:12:26,505:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn.py:464: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+2021-02-20 19:12:26,560:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn_cell_impl.py:961: calling Zeros.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2021-02-20 19:12:27,091:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn.py:244: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2021-02-20 19:12:27,512:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:79: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+2021-02-20 19:12:28,336:INFO: init tf session
+2021-02-20 19:12:28,336:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:175: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2021-02-20 19:12:28,337:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:176: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+2021-02-20 19:12:28,465:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:177: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2021-02-20 19:12:28,484:INFO: first training which no cache
+2021-02-20 19:12:28,484:INFO: Epoch 1 out of 10
+2021-02-20 19:12:54,188:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:14: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2021-02-20 19:12:54,201:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:39: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2021-02-20 19:12:54,201:INFO: WARNING: randomly initializing word vectors
+2021-02-20 19:12:54,201:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:42: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+2021-02-20 19:12:54,202:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/init_ops.py:1251: calling VarianceScaling.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2021-02-20 19:12:54,210:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:90: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2021-02-20 19:12:54,596:WARNING: 
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+2021-02-20 19:12:54,596:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:94: LSTMCell.__init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.LSTMCell, and will be replaced by that in Tensorflow 2.0.
+2021-02-20 19:12:54,596:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:98: bidirectional_dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.Bidirectional(keras.layers.RNN(cell))`, which is equivalent to this API
+2021-02-20 19:12:54,597:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn.py:464: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+2021-02-20 19:12:54,654:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn_cell_impl.py:961: calling Zeros.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2021-02-20 19:12:55,210:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn.py:244: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2021-02-20 19:12:55,650:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:79: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+2021-02-20 19:12:56,516:INFO: init tf session
+2021-02-20 19:12:56,516:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:175: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2021-02-20 19:12:56,516:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:176: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+2021-02-20 19:12:56,640:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:177: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2021-02-20 19:12:56,659:INFO: first training which no cache
+2021-02-20 19:12:56,659:INFO: Epoch 1 out of 10
+2021-02-20 19:16:57,649:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:14: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2021-02-20 19:16:57,716:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:38: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2021-02-20 19:16:57,716:INFO: WARNING: randomly initializing word vectors
+2021-02-20 19:16:57,716:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:41: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+2021-02-20 19:16:57,717:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/init_ops.py:1251: calling VarianceScaling.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2021-02-20 19:16:57,740:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:89: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2021-02-20 19:16:58,214:WARNING: 
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+2021-02-20 19:16:58,214:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:93: LSTMCell.__init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.LSTMCell, and will be replaced by that in Tensorflow 2.0.
+2021-02-20 19:16:58,215:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:97: bidirectional_dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.Bidirectional(keras.layers.RNN(cell))`, which is equivalent to this API
+2021-02-20 19:16:58,215:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn.py:464: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+2021-02-20 19:16:58,280:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn_cell_impl.py:961: calling Zeros.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2021-02-20 19:16:58,888:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn.py:244: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2021-02-20 19:16:59,439:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:79: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+2021-02-20 19:17:00,570:INFO: init tf session
+2021-02-20 19:17:00,571:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:175: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2021-02-20 19:17:00,571:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:176: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+2021-02-20 19:17:00,713:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:177: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2021-02-20 19:17:00,738:INFO: first training which no cache
+2021-02-20 19:17:00,738:INFO: Epoch 1 out of 10
+2021-02-20 19:20:45,730:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:14: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2021-02-20 19:20:45,746:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:37: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2021-02-20 19:20:45,746:INFO: WARNING: randomly initializing word vectors
+2021-02-20 19:20:45,746:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:40: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+2021-02-20 19:20:45,746:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/init_ops.py:1251: calling VarianceScaling.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2021-02-20 19:20:45,756:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:88: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2021-02-20 19:20:46,472:WARNING: 
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+2021-02-20 19:20:46,472:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:92: LSTMCell.__init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.LSTMCell, and will be replaced by that in Tensorflow 2.0.
+2021-02-20 19:20:46,472:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:96: bidirectional_dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.Bidirectional(keras.layers.RNN(cell))`, which is equivalent to this API
+2021-02-20 19:20:46,473:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn.py:464: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+2021-02-20 19:20:46,538:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn_cell_impl.py:961: calling Zeros.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2021-02-20 19:20:47,116:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn.py:244: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2021-02-20 19:20:47,285:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:79: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+2021-02-20 19:20:47,832:INFO: init tf session
+2021-02-20 19:20:47,833:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:175: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2021-02-20 19:20:47,835:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:176: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+2021-02-20 19:20:47,935:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:177: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2021-02-20 19:20:48,056:INFO: first training which no cache
+2021-02-20 19:20:48,057:INFO: Epoch 1 out of 10
+2021-02-20 19:20:49,053:INFO: batch 0 of batches 60,training loss:3.37
+2021-02-20 19:21:38,030:INFO: Epoch 0 dev score acc 0.77 - Epoch 0 dev score f1 0.19
+2021-02-20 19:21:38,031:INFO: save session
+2021-02-20 19:21:38,219:INFO: - new best score 0.1863!
+2021-02-20 19:21:38,219:INFO: Epoch 2 out of 10
+2021-02-20 19:21:39,124:INFO: batch 0 of batches 60,training loss:0.80
+2021-02-20 19:23:04,604:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:14: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2021-02-20 19:23:05,300:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:37: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2021-02-20 19:23:05,301:INFO: WARNING: randomly initializing word vectors
+2021-02-20 19:23:05,302:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:40: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+2021-02-20 19:23:05,303:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/init_ops.py:1251: calling VarianceScaling.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2021-02-20 19:23:05,323:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:88: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2021-02-20 19:23:11,684:WARNING: 
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+2021-02-20 19:23:11,684:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:92: LSTMCell.__init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.LSTMCell, and will be replaced by that in Tensorflow 2.0.
+2021-02-20 19:23:11,685:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:96: bidirectional_dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.Bidirectional(keras.layers.RNN(cell))`, which is equivalent to this API
+2021-02-20 19:23:11,686:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn.py:464: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+2021-02-20 19:23:11,820:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn_cell_impl.py:961: calling Zeros.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2021-02-20 19:23:13,081:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn.py:244: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2021-02-20 19:32:14,661:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:14: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2021-02-20 19:32:14,677:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:41: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2021-02-20 19:32:14,677:INFO: WARNING: randomly initializing word vectors
+2021-02-20 19:32:14,677:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:44: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+2021-02-20 19:32:14,678:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/init_ops.py:1251: calling VarianceScaling.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2021-02-20 19:32:14,688:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:92: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2021-02-20 19:32:15,134:WARNING: 
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+2021-02-20 19:32:15,134:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:96: LSTMCell.__init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.LSTMCell, and will be replaced by that in Tensorflow 2.0.
+2021-02-20 19:32:15,135:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:100: bidirectional_dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.Bidirectional(keras.layers.RNN(cell))`, which is equivalent to this API
+2021-02-20 19:32:15,135:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn.py:464: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+2021-02-20 19:32:15,222:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn_cell_impl.py:961: calling Zeros.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2021-02-20 19:32:15,828:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn.py:244: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2021-02-20 19:32:16,254:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:80: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+2021-02-20 19:32:17,125:INFO: init tf session
+2021-02-20 19:32:17,125:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:176: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2021-02-20 19:32:17,125:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:177: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+2021-02-20 19:32:17,254:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:178: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2021-02-20 19:32:17,274:INFO: first training which no cache
+2021-02-20 19:32:17,274:INFO: Epoch 1 out of 10
+2021-02-20 19:32:19,010:INFO: batch 0 of batches 60,training loss:127.51
+2021-02-20 19:33:20,171:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:14: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2021-02-20 19:33:20,184:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:41: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2021-02-20 19:33:20,184:INFO: WARNING: randomly initializing word vectors
+2021-02-20 19:33:20,185:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:44: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+2021-02-20 19:33:20,185:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/init_ops.py:1251: calling VarianceScaling.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2021-02-20 19:33:20,193:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:92: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2021-02-20 19:33:20,575:WARNING: 
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+2021-02-20 19:33:20,575:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:96: LSTMCell.__init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.LSTMCell, and will be replaced by that in Tensorflow 2.0.
+2021-02-20 19:33:20,576:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:100: bidirectional_dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.Bidirectional(keras.layers.RNN(cell))`, which is equivalent to this API
+2021-02-20 19:33:20,576:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn.py:464: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+2021-02-20 19:33:20,632:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn_cell_impl.py:961: calling Zeros.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2021-02-20 19:33:21,195:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn.py:244: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2021-02-20 19:33:21,624:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:80: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+2021-02-20 19:33:22,466:INFO: init tf session
+2021-02-20 19:33:22,467:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:176: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2021-02-20 19:33:22,467:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:177: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+2021-02-20 19:33:22,594:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:178: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2021-02-20 19:33:22,613:INFO: first training which no cache
+2021-02-20 19:33:22,613:INFO: Epoch 1 out of 10
+2021-02-20 19:33:24,344:INFO: batch 0 of batches 60,training loss:132.39
+2021-02-20 19:34:14,741:INFO: Epoch 0 dev score acc 0.81 - Epoch 0 dev score f1 0.26
+2021-02-20 19:34:14,741:INFO: save session
+2021-02-20 19:34:14,989:INFO: - new best score 0.2613!
+2021-02-20 19:34:14,989:INFO: Epoch 2 out of 10
+2021-02-20 19:34:15,898:INFO: batch 0 of batches 60,training loss:24.65
+2021-02-20 19:35:07,081:INFO: Epoch 1 dev score acc 0.93 - Epoch 1 dev score f1 0.60
+2021-02-20 19:35:07,081:INFO: save session
+2021-02-20 19:35:07,275:INFO: - new best score 0.5991!
+2021-02-20 19:35:07,275:INFO: Epoch 3 out of 10
+2021-02-20 19:35:08,158:INFO: batch 0 of batches 60,training loss:9.47
+2021-02-20 19:35:45,223:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:14: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+2021-02-20 19:35:45,237:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:41: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+2021-02-20 19:35:45,237:INFO: WARNING: randomly initializing word vectors
+2021-02-20 19:35:45,237:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:44: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+2021-02-20 19:35:45,238:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/init_ops.py:1251: calling VarianceScaling.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2021-02-20 19:35:45,247:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:92: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+2021-02-20 19:35:45,742:WARNING: 
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+2021-02-20 19:35:45,742:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:96: LSTMCell.__init__ (from tensorflow.python.ops.rnn_cell_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This class is equivalent as tf.keras.layers.LSTMCell, and will be replaced by that in Tensorflow 2.0.
+2021-02-20 19:35:45,743:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/lstm_crf_model.py:100: bidirectional_dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.Bidirectional(keras.layers.RNN(cell))`, which is equivalent to this API
+2021-02-20 19:35:45,743:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn.py:464: dynamic_rnn (from tensorflow.python.ops.rnn) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `keras.layers.RNN(cell)`, which is equivalent to this API
+2021-02-20 19:35:45,804:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn_cell_impl.py:961: calling Zeros.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+2021-02-20 19:35:46,367:WARNING: From /Users/frankguo/anaconda3/envs/tf1x/lib/python3.6/site-packages/tensorflow/python/ops/rnn.py:244: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2021-02-20 19:35:46,842:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:80: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+2021-02-20 19:35:47,805:INFO: init tf session
+2021-02-20 19:35:47,805:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:176: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2021-02-20 19:35:47,806:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:177: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+2021-02-20 19:35:47,933:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:178: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+2021-02-20 19:35:47,952:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:195: The name tf.summary.scalar is deprecated. Please use tf.compat.v1.summary.scalar instead.
+
+2021-02-20 19:35:47,953:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:197: The name tf.summary.merge is deprecated. Please use tf.compat.v1.summary.merge instead.
+
+2021-02-20 19:35:47,954:WARNING: From /Users/frankguo/workspace/python/ner/simple-lexicon/sequence_model/base_sequence_tagging.py:198: The name tf.summary.FileWriter is deprecated. Please use tf.compat.v1.summary.FileWriter instead.
+
+2021-02-20 19:35:48,225:INFO: first training which no cache
+2021-02-20 19:35:48,226:INFO: Epoch 1 out of 10
+2021-02-20 19:36:39,525:INFO: Epoch 0 dev score acc 0.80 - Epoch 0 dev score f1 0.24
+2021-02-20 19:36:39,526:INFO: save session
+2021-02-20 19:36:39,762:INFO: - new best score 0.2389!
+2021-02-20 19:36:39,763:INFO: Epoch 2 out of 10
+2021-02-20 19:37:31,276:INFO: Epoch 1 dev score acc 0.92 - Epoch 1 dev score f1 0.57
+2021-02-20 19:37:31,277:INFO: save session
+2021-02-20 19:37:31,494:INFO: - new best score 0.5693!
+2021-02-20 19:37:31,494:INFO: Epoch 3 out of 10
+2021-02-20 19:38:22,688:INFO: Epoch 2 dev score acc 0.94 - Epoch 2 dev score f1 0.77
+2021-02-20 19:38:22,688:INFO: save session
+2021-02-20 19:38:22,895:INFO: - new best score 0.7702!
+2021-02-20 19:38:22,895:INFO: Epoch 4 out of 10
+2021-02-20 19:39:15,758:INFO: Epoch 3 dev score acc 0.95 - Epoch 3 dev score f1 0.82
+2021-02-20 19:39:15,758:INFO: save session
+2021-02-20 19:39:15,968:INFO: - new best score 0.8162!
+2021-02-20 19:39:15,968:INFO: Epoch 5 out of 10
+2021-02-20 19:40:09,595:INFO: Epoch 4 dev score acc 0.95 - Epoch 4 dev score f1 0.87
+2021-02-20 19:40:09,596:INFO: save session
+2021-02-20 19:40:09,869:INFO: - new best score 0.8745!
+2021-02-20 19:40:09,869:INFO: Epoch 6 out of 10
+2021-02-20 19:41:02,956:INFO: Epoch 5 dev score acc 0.95 - Epoch 5 dev score f1 0.88
+2021-02-20 19:41:02,956:INFO: save session
+2021-02-20 19:41:03,163:INFO: - new best score 0.8833!
+2021-02-20 19:41:03,163:INFO: Epoch 7 out of 10
+2021-02-20 19:41:53,817:INFO: Epoch 6 dev score acc 0.95 - Epoch 6 dev score f1 0.90
+2021-02-20 19:41:53,817:INFO: save session
+2021-02-20 19:41:54,029:INFO: - new best score 0.8963!
+2021-02-20 19:41:54,030:INFO: Epoch 8 out of 10
+2021-02-20 19:42:45,565:INFO: Epoch 7 dev score acc 0.95 - Epoch 7 dev score f1 0.89
+2021-02-20 19:42:45,565:INFO: Epoch 9 out of 10
+2021-02-20 19:43:36,583:INFO: Epoch 8 dev score acc 0.95 - Epoch 8 dev score f1 0.89
+2021-02-20 19:43:36,583:INFO: Epoch 10 out of 10
+2021-02-20 19:44:28,826:INFO: Epoch 9 dev score acc 0.95 - Epoch 9 dev score f1 0.89
+2021-02-20 19:44:28,826:INFO: - early stopping 3 epochs without improve
+2021-02-20 19:44:28,826:INFO: save session
