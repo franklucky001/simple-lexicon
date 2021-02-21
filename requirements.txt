@@ -1,4 +1,4 @@
-absl-py @ file:///tmp/build/80754af9/absl-py_1607439979954/work
+absl-py==0.11.0
 astor==0.8.1
 certifi==2020.12.5
 cycler==0.10.0
