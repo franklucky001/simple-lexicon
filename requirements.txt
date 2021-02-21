@@ -1,0 +1,43 @@
+absl-py @ file:///tmp/build/80754af9/absl-py_1607439979954/work
+astor==0.8.1
+certifi==2020.12.5
+cycler==0.10.0
+Cython==0.29.21
+gast==0.2.2
+google-pasta==0.2.0
+grpcio @ file:///opt/concourse/worker/volumes/live/8b2ee759-8268-4f0f-6b5b-5ee71275aac0/volume/grpcio_1597430912663/work
+h5py @ file:///opt/concourse/worker/volumes/live/09cb9b5c-fac0-4b8e-4a2a-844fb10f14cb/volume/h5py_1593454153886/work
+importlib-metadata @ file:///tmp/build/80754af9/importlib-metadata_1602276842396/work
+jieba==0.42.1
+joblib==1.0.0
+Keras-Applications @ file:///tmp/build/80754af9/keras-applications_1594366238411/work
+Keras-Preprocessing==1.1.0
+kiwisolver==1.3.1
+Markdown @ file:///opt/concourse/worker/volumes/live/b4c990c3-329e-4be3-5f93-a75bb18a3a93/volume/markdown_1605111067479/work
+matplotlib==3.3.4
+mkl-fft==1.2.0
+mkl-random==1.1.1
+mkl-service==2.3.0
+numpy @ file:///opt/concourse/worker/volumes/live/e6a5a904-ea21-4841-4eec-d53e1ac1014c/volume/numpy_and_numpy_base_1603479626870/work
+opt-einsum==3.1.0
+Pillow==8.1.0
+pkuseg==0.0.25
+protobuf==3.13.0
+pyparsing==2.4.7
+python-dateutil==2.8.1
+scikit-learn==0.24.1
+scipy @ file:///opt/concourse/worker/volumes/live/d2cc8ac1-8922-48bc-7969-1f576a9f572d/volume/scipy_1597686637832/work
+six @ file:///opt/concourse/worker/volumes/live/5839b2d2-7415-4ff0-4c61-c4cddf798f7c/volume/six_1605205320479/work
+sklearn==0.0
+tensorboard==1.14.0
+tensorflow==1.14.0
+tensorflow-estimator==1.14.0
+tensorflow-serving-api==1.14.0
+termcolor==1.1.0
+threadpoolctl==2.1.0
+tqdm==4.56.0
+webencodings==0.5.1
+Werkzeug==0.16.1
+wrapt==1.12.1
+zhconv==1.4.1
+zipp @ file:///tmp/build/80754af9/zipp_1604001098328/work
