@@ -2,12 +2,14 @@
 import os
 import json
 from collections import defaultdict
+from functools import reduce
 from config.dataset_config import DatasetConfig
 
 
 class SimpleLexiconLoader:
     LEXICON_UNK = '<UNK>'
     LEXICON_NONE = '<NONE>'
+    LEXICON_PAD = '<PAD>'
     WORD_UNK = '__unk__'
     WORD_PAD = '__padding__'
     TAG_PAD = 'S-PAD'
@@ -52,6 +54,7 @@ class SimpleLexiconLoader:
         print(f'tag pad id: {self.tag2id[self.TAG_PAD]}')
         print(f'word pad id: {self.word2id[self.WORD_PAD]}')
         print(f'word unk id: {self.word2id[self.WORD_UNK]}')
+        print(f'lexicon pad id : {self.lexicon2id[self.LEXICON_PAD]}')
         print(f'lexicon none id : {self.lexicon2id[self.LEXICON_NONE]}')
         print(f'lexicon unk id : {self.lexicon2id[self.LEXICON_UNK]}')
         return train, test, dev
@@ -79,7 +82,7 @@ class SimpleLexiconLoader:
         return words2id_list, lexicons2id_list, tags2id_list
 
     def make_samples(self, filepath):
-        words2id_list, lexicons2id_list, tags2id_list = [], [], []
+        words2id_list, lexicons2id_group_list, tags2id_list = [], [], []
         word_unk_id = self.word2id[self.WORD_UNK]
         lexicon_unk_id = self.lexicon2id[self.LEXICON_UNK]
         for words, lexicons, tags in self.reader_sent_gen(filepath):
@@ -87,9 +90,9 @@ class SimpleLexiconLoader:
             words2id_list.append(words2id)
             tags2id = [self.tag2id.get(t) for t in tags]
             tags2id_list.append(tags2id)
-            lexicons2id = [[self.lexicon2id.get(l, lexicon_unk_id) for l in lexicons[i]] for i in range(4)]
-            lexicons2id_list.append(lexicons2id)
-        return words2id_list, lexicons2id_list, tags2id_list
+            lexicons2id = [[[self.lexicon2id.get(l, lexicon_unk_id) for l in ls] for ls in lexicons[i]] for i in range(4)]
+            lexicons2id_group_list.append(lexicons2id)
+        return words2id_list, lexicons2id_group_list, tags2id_list
 
     def make_sample_one(self, sample):
         pass
@@ -99,6 +102,7 @@ class SimpleLexiconLoader:
         sum_of_z = sum([lexicon_counter[k] + self.lexicon_score_bias for k in lexicon_counter.keys()])
         score = 1.0 * unk_z / sum_of_z
         self.lexicon2z_score[self.LEXICON_UNK] = score
+        self.lexicon2z_score[self.LEXICON_PAD] = 0
         for lexicon, count in lexicon_counter.items():
             z = count + self.lexicon_score_bias
             score = 1.0 * z / sum_of_z
@@ -110,7 +114,7 @@ class SimpleLexiconLoader:
     def save_z_score(self, lexicon_path):
         score_file = 'z-score.dic.txt'
         filepath = os.path.join(lexicon_path, score_file)
-        with open(filepath, 'w') as fw:
+        with open(filepath, 'w', encoding='utf-8') as fw:
             for lexicon, idx in self.lexicon2id.items():
                 score = self.lexicon2z_score[lexicon]
                 fw.write(f'{idx}\t{lexicon}\t{score}\n')
@@ -118,7 +122,7 @@ class SimpleLexiconLoader:
     def load_z_score(self, lexicon_path):
         score_file = 'z-score.dic.txt'
         filepath = os.path.join(lexicon_path, score_file)
-        with open(filepath, 'r') as f:
+        with open(filepath, 'r', encoding='utf-8') as f:
             for line in f:
                 idx, lexicon, score = line.strip().split('\t')
                 score = float(score)
@@ -127,7 +131,7 @@ class SimpleLexiconLoader:
 
     @staticmethod
     def reader_sent_gen(filepath):
-        with open(filepath, 'r') as f:
+        with open(filepath, 'r', encoding='utf-8') as f:
             words, lexicons, tags = [], [[], [], [], []], []
             line = f.readline()
             while line:
@@ -143,11 +147,13 @@ class SimpleLexiconLoader:
                 for i in range(4):
                     group_item_str = lexicon_groups[i]
                     lexicon_group_items = group_item_str.split(',')
+                    word_lexicon_items = []
                     for lexicon in lexicon_group_items:
                         if lexicon == '':
-                            lexicons[i].append(SimpleLexiconLoader.LEXICON_NONE)
+                            word_lexicon_items.append(SimpleLexiconLoader.LEXICON_NONE)
                         else:
-                            lexicons[i].append(lexicon)
+                            word_lexicon_items.append(lexicon)
+                    lexicons[i].append(word_lexicon_items)
                 line = f.readline()
 
     def build_lexicon(self, filepath):
@@ -157,15 +163,16 @@ class SimpleLexiconLoader:
             word_set |= set(words)
             tag_set |= set(tags)
             for i in range(4):
-                lexicon_set |= set(lexicons[i])
-                for lexicon in lexicons[i]:
+                group_lexicons = list(reduce(lambda x, y: x+y, lexicons[i]))
+                lexicon_set |= set(group_lexicons)
+                for lexicon in group_lexicons:
                     lexicon_counter[lexicon] += 1
         return word_set, lexicon_set, tag_set, lexicon_counter
 
     @staticmethod
     def save_word_dic(words, lexicon_path):
         word_dic_file = os.path.join(lexicon_path, 'word.dic.txt')
-        with open(word_dic_file, 'w') as fw:
+        with open(word_dic_file, 'w', encoding='utf-8') as fw:
             fw.write(f'{SimpleLexiconLoader.WORD_PAD}\n')
             fw.write(f'{SimpleLexiconLoader.WORD_UNK}\n')
             for word in words:
@@ -174,7 +181,7 @@ class SimpleLexiconLoader:
     @staticmethod
     def save_tag_dic(tags, lexicon_path):
         tag_dic_file = os.path.join(lexicon_path, 'tag.dic.txt')
-        with open(tag_dic_file, 'w') as fw:
+        with open(tag_dic_file, 'w', encoding='utf-8') as fw:
             fw.write(f'{SimpleLexiconLoader.TAG_PAD}\n')
             for tag in tags:
                 fw.write(tag + '\n')
@@ -182,14 +189,15 @@ class SimpleLexiconLoader:
     @staticmethod
     def save_lexicon_dic(lexicons, lexicon_path):
         lexicon_dic_file = os.path.join(lexicon_path, 'lexicon.dic.txt')
-        with open(lexicon_dic_file, 'w') as fw:
+        with open(lexicon_dic_file, 'w', encoding='utf-8') as fw:
+            fw.write(f'{SimpleLexiconLoader.LEXICON_PAD}\n')
             fw.write(f'{SimpleLexiconLoader.LEXICON_UNK}\n')
             for lexicon in lexicons:
                 fw.write(lexicon + '\n')
 
     def read_word_dic(self, lexicon_path):
         word_dic_file = os.path.join(lexicon_path, 'word.dic.txt')
-        with open(word_dic_file, 'r') as f:
+        with open(word_dic_file, 'r', encoding='utf-8') as f:
             for i, line in enumerate(f.readlines()):
                 word = line.strip()
                 self.word2id[word] = i
@@ -197,7 +205,7 @@ class SimpleLexiconLoader:
 
     def read_lexicon_dic(self, lexicon_path):
         lexicon_dic_file = os.path.join(lexicon_path, 'lexicon.dic.txt')
-        with open(lexicon_dic_file, 'r') as f:
+        with open(lexicon_dic_file, 'r', encoding='utf-8') as f:
             for i, line in enumerate(f.readlines()):
                 lexicon = line.strip()
                 self.lexicon2id[lexicon] = i
@@ -205,7 +213,7 @@ class SimpleLexiconLoader:
 
     def read_tag_dic(self, lexicon_path):
         tag_dic_file = os.path.join(lexicon_path, 'tag.dic.txt')
-        with open(tag_dic_file, 'r') as f:
+        with open(tag_dic_file, 'r', encoding='utf-8') as f:
             for i, line in enumerate(f.readlines()):
                 tag = line.strip()
                 self.tag2id[tag] = i
@@ -213,7 +221,7 @@ class SimpleLexiconLoader:
 
 
 if __name__ == "__main__":
-    config = DatasetConfig(version='v1')
+    config = DatasetConfig(version='resume')
     loader = SimpleLexiconLoader()
     train_data, test_data, dev_data = loader.load_data(config.train_file, config.test_file, config.dev_file, config.lexicon_path)
     print('success')

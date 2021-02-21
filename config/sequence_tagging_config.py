@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 import os
 import logging
-from utils.data_utils import load_vocab
+from utils.data_utils import load_vocab, load_z_vectors
 
 
 class SequenceTaggingConfig:
@@ -13,7 +13,9 @@ class SequenceTaggingConfig:
         self.char_dim = 100
         self.hidden_size_lstm = 300
         self.hidden_size_char = 100
+        self.use_gpu = True
         self.use_chars = False
+        self.use_lexicon = True
         self.use_crf = True
         self.train_embeddings = False
         self.epochs = 10
@@ -33,8 +35,10 @@ class SequenceTaggingConfig:
         self.tags_file = os.path.join(self.dataset_path, 'tag.dic.txt')
         self.chars_file = ''
         self.lexicons_file = os.path.join(self.dataset_path, 'lexicon.dic.txt')
+        self.lexicon_z_file = os.path.join(self.dataset_path, 'z-score.dic.txt')
         self.logger = None
         self.embeddings = None
+        self.lexicon_z_embeddings = None
         self.vocab_words = dict()
         self.vocab_tags = dict()
         self.vocab_chars = dict()
@@ -53,7 +57,9 @@ class SequenceTaggingConfig:
         self.logger = self.get_logger(self.logger_path)
         self.vocab_words = load_vocab(self.words_file)
         self.vocab_tags = load_vocab(self.tags_file)
-        self.vocab_lexicons = load_vocab(self.lexicons_file)
+        if self.use_lexicon:
+            self.vocab_lexicons = load_vocab(self.lexicons_file)
+        self.lexicon_z_embeddings = load_z_vectors(self.lexicon_z_file)
         if self.use_chars:
             self.vocab_chars = load_vocab(self.chars_file)
         else:
@@ -69,3 +75,4 @@ class SequenceTaggingConfig:
         handler.setFormatter(logging.Formatter('%(asctime)s:%(levelname)s: %(message)s'))
         logging.getLogger().addHandler(handler)
         return logger
+

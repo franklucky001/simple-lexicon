@@ -173,7 +173,12 @@ class BaseSequenceTagging:
 
     def initialize_session(self):
         self.logger.info("init tf session")
-        self.session = tf.Session()
+        if self.config.use_gpu:
+            config = tf.ConfigProto()
+            config.gpu_options.allow_growth = True
+        else:
+            config = None
+        self.session = tf.Session(config=config)
         self.session.run(tf.global_variables_initializer())
         self.saver = tf.train.Saver()
 
