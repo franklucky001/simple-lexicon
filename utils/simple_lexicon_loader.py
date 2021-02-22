@@ -14,8 +14,8 @@ class SimpleLexiconLoader:
     WORD_PAD = '__padding__'
     TAG_PAD = 'S-PAD'
 
-    def __init__(self):
-        self.use_cache = True
+    def __init__(self, use_cache=True):
+        self.use_cache = use_cache
         self.lexicon_score_bias = 1
         self.word2id = {}
         self.id2word = {}
@@ -221,7 +221,7 @@ class SimpleLexiconLoader:
 
 
 if __name__ == "__main__":
-    config = DatasetConfig(version='resume')
+    config = DatasetConfig(data_name='resume')
     loader = SimpleLexiconLoader()
     train_data, test_data, dev_data = loader.load_data(config.train_file, config.test_file, config.dev_file, config.lexicon_path)
     print('success')

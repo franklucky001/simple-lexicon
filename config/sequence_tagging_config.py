@@ -7,7 +7,7 @@ from utils.data_utils import load_vocab, load_z_vectors
 class SequenceTaggingConfig:
     base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-    def __init__(self, model_name):
+    def __init__(self, model_name, data_name='resume'):
         self.word_dim = 300
         self.lexicon_dim = 100
         self.char_dim = 100
@@ -27,10 +27,11 @@ class SequenceTaggingConfig:
         self.batch_size = 64
         self.do_summary = True
         self.optimizer = 'adam'
-        self.model_dir = f'{self.base_dir}/models/{model_name}/'
-        self.summary_dir = f'{self.base_dir}/summary/{model_name}/'
-        self.logger_path = f'{self.base_dir}/logs/{model_name}-log.txt'
-        self.dataset_path = os.path.join(self.base_dir, 'data/records/resume')
+        self.model_dir = os.path.join(self.base_dir, f'models/{data_name}/{model_name}/')
+        self.summary_dir = os.path.join(self.base_dir, f'summary/{data_name}/{model_name}/')
+        self.logger_dir = os.path.join(self.base_dir, f'logs/{data_name}/')
+        self.logger_path = os.path.join(self.logger_dir, f'{model_name}-log.txt')
+        self.dataset_path = os.path.join(self.base_dir, f'data/records/{data_name}')
         self.words_file = os.path.join(self.dataset_path, 'word.dic.txt')
         self.tags_file = os.path.join(self.dataset_path, 'tag.dic.txt')
         self.chars_file = ''
@@ -54,6 +55,8 @@ class SequenceTaggingConfig:
             os.makedirs(self.model_dir)
         if not os.path.exists(self.summary_dir):
             os.makedirs(self.summary_dir)
+        if not os.path.exists(self.logger_dir):
+            os.makedirs(self.logger_dir)
         self.logger = self.get_logger(self.logger_path)
         self.vocab_words = load_vocab(self.words_file)
         self.vocab_tags = load_vocab(self.tags_file)
