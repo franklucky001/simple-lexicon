@@ -24,29 +24,34 @@ def load_data(with_lexicon=False):
 def create_model():
     if use_lexicon_model:
         model = SimpleLexiconModel(tagging_config)
+        print("use simple lexicon model")
     else:
         model = LSTMCrfModel(tagging_config)
+        print("use basic lstm crf model")
     return model
 
 
 def train_model():
-    model = create_model()
+    global model
     model.train(train, dev)
-    model.evaluate(test)
+    # model.evaluate(test)
 
 
 def predict():
-    model = create_model()
+    global model
     model.restore_session()
     model.evaluate(test)
 
 
 if __name__ == "__main__":
-    use_lexicon_model = False
-    model_name = 'lstm-crf'
-    data_name = 'rmrb'
+    use_lexicon = os.environ.get('USE_LEXICON', 'False')
+    use_lexicon_model = True if use_lexicon.lower() == 'true' else False
+    with_lexicon = use_lexicon_model
+    model_name = os.environ.get('MODEL_NAME', 'lstm-crf')
+    data_name = os.environ.get('DATA_NAME', 'rmrb')
     config = DatasetConfig(data_name=data_name)
     tagging_config = SequenceTaggingConfig(model_name, data_name)
-    train, test, dev = load_data(with_lexicon=False)
+    train, test, dev = load_data(with_lexicon)
+    model = create_model()
     # train_model()
     predict()

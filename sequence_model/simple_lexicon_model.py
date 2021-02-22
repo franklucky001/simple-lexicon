@@ -81,7 +81,8 @@ class SimpleLexiconModel(BaseSequenceTagging):
 
         self.word_embeddings = tf.nn.dropout(word_embeddings, self.dropout)
 
-    def add_lexicon_mul_score(self, lexicon_ids, suffix, _lexicon_embeddings, _lexicon_scores):
+    @staticmethod
+    def add_lexicon_mul_score(lexicon_ids, suffix, _lexicon_embeddings, _lexicon_scores):
         embedding_lexicon = tf.nn.embedding_lookup(_lexicon_embeddings,
                                                    lexicon_ids,
                                                    name=f'lexicon_embedding_{suffix}')

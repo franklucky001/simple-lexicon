@@ -14,6 +14,7 @@ class SequenceTaggingConfig:
         self.hidden_size_lstm = 300
         self.hidden_size_char = 100
         self.use_gpu = True
+        self.gpu_memory_fraction = float(os.environ.get('gpu_memory_fraction', 0.5))
         self.use_chars = False
         self.use_lexicon = True
         self.use_crf = True

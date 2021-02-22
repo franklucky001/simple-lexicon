@@ -176,7 +176,9 @@ class BaseSequenceTagging:
         self.logger.info("init tf session")
         if self.config.use_gpu:
             config = tf.ConfigProto()
-            config.gpu_options.allow_growth = True
+            # config.gpu_options.allow_growth = True
+            self.logger.info(f"+++ gpu memory fraction : {self.config.gpu_memory_fraction:04.2f} +++")
+            config.gpu_options.per_process_gpu_memory_fraction = self.config.gpu_memory_fraction
         else:
             config = None
         self.session = tf.Session(config=config)
