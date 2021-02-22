@@ -48,5 +48,5 @@ if __name__ == "__main__":
     config = DatasetConfig(data_name=data_name)
     tagging_config = SequenceTaggingConfig(model_name, data_name)
     train, test, dev = load_data(with_lexicon=False)
-    train_model()
-    # predict()
+    # train_model()
+    predict()
