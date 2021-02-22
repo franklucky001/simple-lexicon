@@ -5,9 +5,9 @@ from sequence_model.base_sequence_tagging import BaseSequenceTagging
 
 class LSTMCrfModel(BaseSequenceTagging):
     def __init__(self, config):
-        super().__init__(config)
         self.char_ids = None
         self.word_lengths = None
+        super().__init__(config)
 
     def add_placeholders(self):
         # shape = (batch size, max length of sentence in batch)
@@ -101,7 +101,7 @@ class LSTMCrfModel(BaseSequenceTagging):
             output = tf.concat([output_fw, output_bw], axis=-1)
             output = tf.nn.dropout(output, self.dropout)
 
-        with tf.variable_scope("proj"):
+        with tf.variable_scope("project"):
             W = tf.get_variable("W", dtype=tf.float32, shape=[2*self.config.hidden_size_lstm, self.config.n_tags])
 
             b = tf.get_variable("b", shape=[self.config.n_tags], dtype=tf.float32, initializer=tf.zeros_initializer())

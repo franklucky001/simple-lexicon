@@ -24,7 +24,7 @@ def load_vocab(filename):
     """
     try:
         d = dict()
-        with open(filename) as f:
+        with open(filename, 'r', encoding='utf-8') as f:
             for idx, word in enumerate(f):
                 word = word.strip()
                 d[word] = idx
@@ -54,6 +54,21 @@ def pad_sequences(sequences, pad_tok, max_length):
     return sequence_padded, sequence_length
 
 
+def pad_char_level_sequences(sequences, pad_tok):
+    max_length_word = max([max(map(lambda x: len(x), seq)) for seq in sequences])
+    sequence_padded, sequence_length = [], []
+    for seq in sequences:
+        # all words are same length now
+        sp, sl = pad_sequences(seq, pad_tok, max_length_word)
+        sequence_padded += [sp]
+        sequence_length += [sl]
+    max_length_sentence = max(map(lambda x: len(x), sequences))
+    sequence_padded, _ = pad_sequences(sequence_padded,
+                                        [pad_tok] * max_length_word, max_length_sentence)
+    sequence_length, _ = pad_sequences(sequence_length, 0,
+                                        max_length_sentence)
+    return sequence_padded, sequence_length
+
 def mini_batches(data, mini_batch_size):
     """
     Args:
@@ -78,3 +93,12 @@ def mini_batches(data, mini_batch_size):
     if len(x_batch) != 0:
         yield x_batch, y_batch
 
+
+def load_z_vectors(filepath):
+    import numpy as np
+    scores = []
+    with open(filepath, 'r', encoding='utf-8') as f:
+        for line in f:
+            _, _, score = line.strip().split()
+            scores.append([score])
+    return np.array(scores)
