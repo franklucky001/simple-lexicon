@@ -4,7 +4,6 @@ class MyIOError(Exception):
         # custom error message
         message = """
 ERROR: Unable to locate file {}.
-
 FIX: Have you tried running python build_data.py first?
 This will build vocab file from your train, test and dev sets and
 trimm your word vectors.
@@ -63,11 +62,10 @@ def pad_char_level_sequences(sequences, pad_tok):
         sequence_padded += [sp]
         sequence_length += [sl]
     max_length_sentence = max(map(lambda x: len(x), sequences))
-    sequence_padded, _ = pad_sequences(sequence_padded,
-                                        [pad_tok] * max_length_word, max_length_sentence)
-    sequence_length, _ = pad_sequences(sequence_length, 0,
-                                        max_length_sentence)
+    sequence_padded, _ = pad_sequences(sequence_padded, [pad_tok] * max_length_word, max_length_sentence)
+    sequence_length, _ = pad_sequences(sequence_length, 0, max_length_sentence)
     return sequence_padded, sequence_length
+
 
 def mini_batches(data, mini_batch_size):
     """
