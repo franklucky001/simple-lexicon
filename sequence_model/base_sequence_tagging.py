@@ -2,7 +2,7 @@
 import os
 import numpy as np
 import tensorflow as tf
-from utils.tagging_metrics import tagging_accuracy_score, tagging_f1_score, mask_predictions
+from utils.tagging_metrics import tagging_accuracy_score, tagging_f1_score, tagging_precision_score, mask_predictions
 from config.sequence_tagging_config import SequenceTaggingConfig
 from utils.data_utils import pad_sequences
 
@@ -157,8 +157,9 @@ class BaseSequenceTagging:
             prediction = mask_predictions(pred_batch, sequence_lengths=batch_sequence_lengths)
             predictions.extend(prediction)
         acc = tagging_accuracy_score(labels, predictions)
+        precision = tagging_precision_score(labels, predictions, average='macro')
         f1 = tagging_f1_score(labels, predictions, average='macro')
-        return {'acc': acc, 'f1': f1}
+        return {'accuracy': acc, 'precision': precision, 'f1': f1}
 
     def predict_batch(self, x_batch):
         feed, sequence_lengths = self.get_feed_dict(x_batch, dropout=1.0)
@@ -173,7 +174,14 @@ class BaseSequenceTagging:
 
     def initialize_session(self):
         self.logger.info("init tf session")
-        self.session = tf.Session()
+        if self.config.use_gpu:
+            config = tf.ConfigProto()
+            # config.gpu_options.allow_growth = True
+            self.logger.info(f"+++ gpu memory fraction : {self.config.gpu_memory_fraction:04.2f} +++")
+            config.gpu_options.per_process_gpu_memory_fraction = self.config.gpu_memory_fraction
+        else:
+            config = None
+        self.session = tf.Session(config=config)
         self.session.run(tf.global_variables_initializer())
         self.saver = tf.train.Saver()
 

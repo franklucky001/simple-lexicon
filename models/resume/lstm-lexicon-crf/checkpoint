@@ -1,0 +1,2 @@
+model_checkpoint_path: "D:\\workspace\\python\\simple-lexicon/models/lstm-lexicon-crf/"
+all_model_checkpoint_paths: "D:\\workspace\\python\\simple-lexicon/models/lstm-lexicon-crf/"

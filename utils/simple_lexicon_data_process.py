@@ -5,7 +5,7 @@ pku_tokenizer = pkuseg.pkuseg()
 
 
 def make_simple_lexicon_data(ori_file, dst_file):
-    fw = open(dst_file, 'w')
+    fw = open(dst_file, 'w', encoding='utf-8')
     for words, tags in read_sent_gen(ori_file):
         sent = ''.join(words)
         ranges_all = make_term_ranges_by_segment(sent)
@@ -60,7 +60,7 @@ def make_range(sent, words):
 
 
 def read_sent_gen(ori_file):
-    with open(ori_file, 'r') as f:
+    with open(ori_file, 'r', encoding='utf-8') as f:
         line = f.readline()
         words, tags = [], []
         while line:

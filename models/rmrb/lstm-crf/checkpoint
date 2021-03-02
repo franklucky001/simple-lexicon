@@ -1,0 +1,2 @@
+model_checkpoint_path: "/Users/frankguo/workspace/python/ner/simple-lexicon/models/rmrb/lstm-crf/"
+all_model_checkpoint_paths: "/Users/frankguo/workspace/python/ner/simple-lexicon/models/rmrb/lstm-crf/"
