@@ -2,10 +2,11 @@
 Chinese ner, lstm-crf with tf implement simple lexicon
 
 ## 数据准备, 配置分词器
-在simple_lexicon_data_process.py文件配置分词器
-在preprocessor中设置use_cache=False生成训练record文件
-loader = SimpleLexiconLoader(use_cache=False)
-python preprocessor.py
+step 1 在simple_lexicon_data_process.py文件配置分词器  
+
+step 2 在preprocessor中设置use_cache=False生成训练record文件  
+
+step 3 python preprocessor.py
 
 ## 训练
 build docker
