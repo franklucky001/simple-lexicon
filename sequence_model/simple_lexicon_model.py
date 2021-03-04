@@ -138,3 +138,7 @@ class SimpleLexiconModel(BaseSequenceTagging):
         if dropout is not None:
             feed[self.dropout] = dropout
         return feed, sequence_lengths
+
+    def predict(self, x):
+        # TODO override
+        pass
